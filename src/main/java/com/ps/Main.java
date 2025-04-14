@@ -7,17 +7,17 @@ public class Main {
         double annualInterestRate = 0.0275;
         int matureInterestYears = 10;
 
-        String dailyCompound = "daily"; // dailyCompound represents how often interest is compounded //
-        double futureValue = 0.0;
+        String dailyCompound = "daily";String monthly = "monthly"; String yearly = "yearly"; // dailyCompound represents how often interest is compounded //
+        double futureValue = 3.0;
 
-        switch ("") {
-            case "daily":
+        switch (dailyCompound) {
+            case"daily":
                 futureValue = principal * Math.pow(1 + (annualInterestRate / 365), 365 * matureInterestYears);
                 break;
             case "monthly":
                 futureValue = principal * Math.pow(1 + (annualInterestRate / 12), 12 * matureInterestYears);
                 break;
-            case "yearly":
+            case  "yearly":
                 futureValue = principal * Math.pow(1 + annualInterestRate, matureInterestYears);
                 break;
             default:
